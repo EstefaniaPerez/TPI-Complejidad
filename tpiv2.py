@@ -28,7 +28,6 @@ def subArreglos(arreglo,menor,mayor,k):
         mitad=mayor-1
     else:
         mitad=k//2
-    #parte izquierda
     for i in range(menor, mayor):
         sumizq= sumizq + arreglo[i]
     # for i in range(menor,mitad+1):
