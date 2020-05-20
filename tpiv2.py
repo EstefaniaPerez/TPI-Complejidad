@@ -3,16 +3,16 @@ suma=-999
 extremosizq=-9999
 maxderr=-9999
 def maximoSubarray(arreglo,menor,mayor,medio,k):
-    global extremosizq,extremoder
+    
     if k>medio+1:
         #print(menor)
         #print(mayor)
         #print(medio)
         centro= subArreglos(arreglo, mayor-k-1, medio+mayor-k+1,k)
-        extremosizq= subArreglos(arreglo,menor,menor+k,k)
+        maxizq= subArreglos(arreglo,menor,menor+k,k)
         maxder= subArreglos(arreglo,mayor-k+1,mayor+1,mayor)
         #print("esto es" +str(centro))
-        return max(extremosizq, maxder, centro)
+        return max(maxizq, maxder, centro)
     else:
         maxder= subArreglos(arreglo,mayor-k+1,mayor+1,k)
         maxizq= subArreglos(arreglo,menor,menor+k,k)
@@ -46,7 +46,7 @@ def tiempo(arreglo,menor,mayor,medio,k):
         return 0
     return maximoSubarray(arreglo,menor,mayor,medio,k)
 
-a =[-200, -350, 55,-110,-56,85,158,85,250]
-k=2
+a =[-200, 350, -55,-110,56,85,-158,85,25,1500, -200, -350, 55,110,-56,85,158,-85,250]
+k=3
 #print(subArreglos(a,5,9-2,4))
 print(tiempo(a,0,8,4,k))
