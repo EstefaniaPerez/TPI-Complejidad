@@ -46,7 +46,7 @@ def tiempo(arreglo,menor,mayor,medio,k):
         return 0
     return maximoSubarray(arreglo,menor,mayor,medio,k)
 
-a =[-200, 350, -55,-110,56,85,-158,85,25,1500, -200, -350, 55,110,-56,85,158,-85,250]
+a =[-200, 350, -55,-110,56,85,-158,85,15]
 k=3
 #print(subArreglos(a,5,9-2,4))
 print(tiempo(a,0,8,4,k))
