@@ -39,7 +39,7 @@ def dijkstra(matriz):
         visitado[posicion]=1
         for j in range(1, longitud):
             if(visitado[j]==0):
-                if(camino[posicion]+matriz[posicion][j]<= camino[j]):
+                if(camino[posicion]+matriz[posicion][j]< camino[j]):
                     camino[j]=camino[posicion]+matriz[posicion][j]
                     solucion[j]=posicion
 
@@ -63,8 +63,8 @@ def armarMatriz(n, distancias):
 
 @tiempoDeEjecucion("dinamica")
 def dinamica():
-    n = 125
-    distancias = [23, 55, 47, 36,11]
+    n = 80
+    distancias = [23, 55, 47, 36,11, 56, 78,23, 45, 71, 43, 19, 29, 65, 72, 34, 45, 76, 80, 21, 18]
     matriz = armarMatriz(n, distancias)
     dijkstra(matriz)
 
